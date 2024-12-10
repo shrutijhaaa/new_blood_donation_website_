@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/*header section*/
+header {
+    margin-top:-1.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:black;
+    color: white;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    margin-left: -20%;
+    align-items: center;
+}
+
+nav .nav-links li a i {
+    margin-right: 22px;
+    font-size: 20px;
+}
+
+nav .nav-links li a:hover {
+    color: red;
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Ensure the video is behind other content */
+}
+
+.video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the area without distortion */
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    max-width: 600px;
+    margin-top:2%;
+    background: #fff;
+    margin-left:30%;
+    padding: 20px;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+select, textarea, input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 90px;
+    resize: none;
+}
+
+input[type="submit"] {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: red;
+}
+/* Footer section*/
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* Output Container */
+.output-container {
+    padding: 20px;
+   /* Background color for output container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 10px; /* Space between form and output */
+    overflow: hidden; /* Ensures no content overflows */
+    width: 100%; /* Ensures the container takes up the full width */
+}
+
+/* Heading Styling */
+h3 {
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center;
+    color: #333;
+}
+
+/* Table Styling */
+table {
+    width: 95%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Space above the table */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 16px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+td {
+    text-align: left;
+}
+
+/* Button Container Styling */
+.button-container {
+    text-align: center;
+    margin-top: 20px; /* Space above the button */
+}
+
+.button-container a button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded button */
+}
+
+.button-container a button:hover {
+    background-color: #45a049;
+}
+
+/* Message Styling */
+p {
+    margin-top: 20px;
+    text-align: center;
+    color: #ff0000;
+}

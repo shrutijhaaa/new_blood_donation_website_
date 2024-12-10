@@ -1,0 +1,134 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5bcc4;
+    color: #333;
+}
+/*header section*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:black;
+    color: white;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    margin-left: -20%;
+    align-items: center;
+}
+
+nav .nav-links li a i {
+    margin-right: 22px;
+    font-size: 20px;
+}
+
+nav .nav-links li a:hover {
+    color: red;
+}
+
+
+.requirements {
+    
+    align-items: center;
+    max-width: 650px;
+   margin-top:-50%;
+   margin-left:28%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(31, 29, 29, 0.1);
+    text-align: left;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Adjust the height as needed */
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    z-index: -1;
+}
+
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.requirements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.requirements ul li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #e74c3c;
+    position: relative;
+    padding-left: 25px;
+}
+
+.requirements ul li:before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: green;
+    font-weight: bold;
+}
+.requirements p{
+    color: green;
+    font-weight: bold;
+    font-size: large;
+    margin-left: 25%;
+}
+.button button{
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    margin-left: 25%;
+    display: flex;
+
+    position: relative;
+    background-color: orangered;
+    color: white;
+    font-size: 180%;
+    font-weight: bolder;
+    border-radius: 0.5rem;
+    border-color: white;
+}
+
+/* Footer section*/
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.img{
+    margin-top:-15%;
+}

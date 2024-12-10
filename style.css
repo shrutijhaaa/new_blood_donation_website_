@@ -1,0 +1,532 @@
+
+body{
+    
+    margin:0;
+    padding: 0;
+    height:100%;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    scrollbar-width: thin;
+}
+.container{
+    position: relative;
+    height:100vh;
+    width:100%;
+    background-image: url("images/doctor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 5s;
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:black;
+    color: white;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    margin-left: -20%;
+    align-items: center;
+}
+
+nav .nav-links li a i {
+    margin-right: 22px;
+    font-size: 20px;
+}
+
+nav .nav-links li a:hover {
+    color: red;
+}
+
+.para p{
+    text-align: center;
+    margin-top: 18%;
+    font-size: 180%;
+    font-weight: bold;
+    height: 100%;
+    color:white;
+    margin-right:20% ;
+    margin-left: 8%;
+    height:180px;
+    width:720px;
+    padding:30px 50px;
+    border-radius: 50px;
+    background-color: rgba(255,195,195,0.212);
+    border-top:1px solid rbga(255,255,255,0.4);
+    border-left:1px solid rbga(255,255,255,0.3);
+    backdrop-filter: blur(8px);
+}
+p span{
+    color: red;
+}
+p:hover{
+    color:blue;
+}
+.button button{
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    margin-left: 25%;
+    display: flex;
+     margin-top: -8%;
+    position: relative;
+    background-color:blue;
+    color: white;
+    font-size: 180%;
+    font-weight: bolder;
+    border-radius: 0.5rem;
+    border-color: white;
+}
+.img{
+    margin-left: 50%;
+    margin-top: -20%;
+}
+@keyframes animate{
+
+
+   0%{
+    background-image: url("images/new2.jpg");
+   } 
+   10%{
+    background-image: url("images/new6.jpg");
+   }
+   20%{
+    background-image: url("images/girl.jpg");
+   }
+   40%{
+    background-image: url("images/new1.jpg");
+   }
+   60%{
+    background-image: url("images/blood.jpg");
+   }
+   80%{
+
+    background-image: url("images/boy.jpg");
+   }
+   100%{
+    background-image: url("images/new5.jpg");
+   }
+}
+
+
+.image{
+    
+    height: 50%;
+    margin-left:10%;
+    margin-top: 18%;
+}
+.about{
+    margin-left:45%;
+    margin-top: -25%;
+    font-weight: 300;
+    font-size: 120%;
+  
+}
+.about h1{
+    color: red;
+}
+
+
+/* container styles */
+.container-wrapper {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 100px;
+  }
+  
+  .scroll-container {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .box {
+    flex: 0 0 300px;
+    margin: 0 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .box img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .box .learn-more {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .background-image {
+    margin-top: -2%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130%;
+    background: url('images/doctor.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+  }
+  
+  /* New CSS to pause scrolling without changing layout */
+  .scroll-container.paused {
+    animation-play-state: paused;
+  }
+  
+  
+
+
+  /*avilable*/
+  .back {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    background: linear-gradient(155deg, #ffcccc, #ff9999);
+   margin-top:10%;
+    font-family: 'Arial', sans-serif;
+}
+.back h1{
+    margin-top:-20%;
+    margin-left: 20%;
+    color:red;
+}
+.Blood {
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin-left:-35%;
+}
+.blood-group {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    background: rgba(255, 0, 0, 0.8);
+    animation: bounce 2s infinite, colorChange 6s infinite, rotate 4s linear infinite;
+    transition: transform 0.3s;
+}
+
+.blood-group:hover {
+    transform: scale(1.2);
+}
+#a-positive { background: #ff4d4d; }
+#a-negative { background: #ff3333; }
+#b-positive { background: #ff6666; }
+#b-negative { background: #ff1a1a; }
+#ab-positive { background: #ff8080; }
+#ab-negative { background: #e60000; }
+#o-positive { background: #ff9999; }
+#o-negative { background: #cc0000; }
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background: rgba(255, 0, 0, 0.8);
+    }
+    50% {
+        background: rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        background: rgba(255, 0, 0, 0.8);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* Blood camp*/
+
+.event-background {
+    position: relative;
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    width:100%;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-wrapper {
+    width: 200%;
+    max-width: 1200px; /* Adjust as needed */
+    overflow: hidden; /* Hide anything overflowing */
+}
+
+.event-scroller {
+    display: flex;
+    animation: event-scroll 20s linear infinite;
+    transform: translateY(-5px); /* Move scroller up by 5px */
+}
+
+.event-box {
+    flex: 0 0 300px;
+    padding: 20px;
+    margin: 0 10px; /* Space between boxes */
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.event-box:hover {
+    transform: scale(1.05);
+}
+
+.event-box img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.event-learn-more {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes event-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-80%); }
+}
+
+h1 {
+    text-align: center;
+    color: red;
+}
+
+/* knowlwgwe section*/
+.donation-info {
+  
+    display: flex;
+    padding: 20px;
+    background-color: rgb(243, 191, 191);
+    margin: 20px;
+    box-shadow: 0px 0px 10px rgba(32, 31, 31, 0.1);
+}
+
+.image-container {
+    position: relative;
+    flex: 1;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: red;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.text-overlay span {
+    font-weight: bold;
+}
+
+.compatibility-table {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.compatibility-table h2, .compatibility-table h3 {
+    color: red;
+}
+
+.compatibility-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.compatibility-table th, .compatibility-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.compatibility-table th {
+    background-color: red;
+    color: white;
+}
+
+.compatibility-table td {
+    color: #555;
+}
+
+.additional-info {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info p {
+    margin-bottom: 20px;
+}
+
+.additional-info button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.additional-info button:hover {
+    background-color: red;
+}
+/*footer*/
+footer {
+    background-color: #262626;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color:red;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+

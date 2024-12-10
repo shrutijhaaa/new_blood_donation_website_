@@ -1,0 +1,277 @@
+body{
+    background-color:rgb(246, 198, 198);
+    overflow-x: hidden;
+}
+/*header section*/
+header {
+    margin-top:-1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:black;
+    color: white;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    margin-left: -20%;
+    align-items: center;
+}
+
+nav .nav-links li a i {
+    margin-right: 22px;
+    font-size: 20px;
+}
+
+nav .nav-links li a:hover {
+    color: red;
+}
+.infographic {
+    display: flex;
+    margin-top:0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   height: 100vh;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Adjust the height as needed */
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.step {
+   
+    position: relative;
+    background-color: white;
+    padding: 10px;
+    margin-left:25%;
+    max-width: 830px;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+
+.step:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.step1 {
+    margin-top: 2%;
+    background: #e74c3c;
+    width: 80%;
+    }
+
+.step2 {
+    margin-top: 0.5%;
+    background: #f39c12;
+    width: 80%;
+  }
+
+.step3 {
+    margin-top: 0.5%;
+    background: #27ae60;
+    width:80%;
+    }
+
+.step4 {
+    margin-top: 0.5%;
+    background: #2980b9;
+    width: 80%;
+    }
+
+.step5 {
+    margin-top: 0.5%;
+    background: #8e44ad;
+    width: 80%;
+}
+
+.step6 {
+    margin-top: 0.5%;
+    background: palevioletred;
+    width: 70%;
+}
+
+.number {
+    font-size: 20px;
+    font-weight: bold;
+  
+
+}
+
+.text {
+    font-size: 18px;
+}
+
+/*why you donate the blood*/
+
+.hero-image {
+    background: url('images/background.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    width: 98%;
+    max-width: 1600px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 2 columns layout */
+    gap: 50px; /* Space between containers */
+}
+h1{
+    text-align: center;
+}
+.donation-reason {
+    background: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Box shadow */
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 250px; /* Adjust height to make it square */
+    width: 250px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.donation-reason:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.donation-reason h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.donation-reason p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+/*camp*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    width: 98%;
+    max-width: 1600px;
+    gap: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.info-box {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.info-box h2 {
+    margin-top: 0;
+}
+
+.info-box p {
+    line-height: 1.6;
+}
+
+/*footer*/
+footer {
+    background-color: #262626;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color:red;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+}
+
+

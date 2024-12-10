@@ -1,0 +1,149 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Set a light background color for the page */
+    margin: 0;
+    padding: 0;
+}
+
+/* WhatsApp Icon Button */
+/* chatboat.css */
+#chatIcon {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 1000 !important;
+}
+
+#chatIcon button {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+#chatIcon img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Chatbot Container */
+#chatbot {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background-color: #fff; /* White background for the chatbot */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+#chatHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #007bff; /* Header background color */
+    color: #fff; /* White text color for header */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#chatLogo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+#chatDate {
+    font-size: 0.85em;
+    color: #fff;
+    margin-left: auto;
+}
+
+#closeChat {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* Chat Content */
+#chatContent {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#chatAvatar img {
+    width: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.chatMessage {
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    max-width: 80%;
+}
+
+.botMessage {
+    background-color: #e9ecef; /* Light grey background for bot messages */
+    color: #000; /* Black text color for bot messages */
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+.userMessage {
+    background-color: #007bff; /* Blue background for user messages */
+    color: #fff; /* White text color for user messages */
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+#userInput {
+    width: calc(100% - 70px);
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+#sendMessage {
+    background-color: #007bff; /* Button background color */
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Ensure no background image interference */
+#chatbot, #chatHeader, #chatContent {
+    background-image: none !important; /* Ensure no background images */
+}
+
+#chatbot img, #chatIcon img {
+    background: none !important; /* No background on images */
+    box-shadow: none !important; /* Remove any box shadow */
+}
+
+/* Ensure body background stays the same */
+body {
+    background-image: none !important; /* No background image for body */
+}

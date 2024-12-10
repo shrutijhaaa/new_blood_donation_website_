@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Chatbot</title>
+    <link rel="stylesheet" href="chatboat.css?v=1.0">
+</head>
+<body>
+<!-- WhatsApp Icon Button -->
+<div id="chatIcon" style="background: none; border: none; padding: 0; margin: 0; box-shadow: none;">
+    <button id="openChat" style="background: none; border: none; padding: 0; margin: 0;">
+        <img src="images/boatiavtar.jpg" height="80" width="100"alt="WhatsApp Icon">
+    </button>
+</div>
+
+
+
+    <!-- Chatbot Container -->
+    <div id="chatbot" style="display: none;">
+        <div id="chatHeader">
+            <div id="chatLogo">
+                <img src="images/boaticon.jpg" height="30" alt="Logo">
+            </div>
+            <div id="chatDate"></div>
+            <button id="closeChat">✖</button>
+        </div>
+        <div id="chatContent">
+            <div id="chatAvatar">
+                <img src="images/hiiboat.jpg" height="100" alt="Chatbot Avatar">
+            </div>
+            <div id="messages">
+                <p class="chatMessage botMessage">Hi there 👋 Feel free to ask anything about blood donation!</p>
+            </div>
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <button id="sendMessage">Send</button>
+        </div>
+    </div>
+
+    <script>
+       document.getElementById('openChat').addEventListener('click', function() {
+    document.getElementById('chatbot').style.display = 'flex';
+    document.getElementById('chatIcon').style.display = 'none';
+});
+
+document.getElementById('closeChat').addEventListener('click', function() {
+    document.getElementById('chatbot').style.display = 'none';
+    document.getElementById('chatIcon').style.display = 'block';
+});
+
+document.getElementById('sendMessage').addEventListener('click', function() {
+    const userInput = document.getElementById('userInput').value.trim();
+    if (userInput !== '') {
+        const userMessage = document.createElement('p');
+        userMessage.className = 'chatMessage userMessage';
+        userMessage.textContent = userInput;
+        document.getElementById('messages').appendChild(userMessage);
+        document.getElementById('userInput').value = '';
+
+        // Simulate chatbot response
+        setTimeout(function() {
+            const botMessage = document.createElement('p');
+            botMessage.className = 'chatMessage botMessage';
+            
+            // Blood donation-related questions and responses
+            const responses = {
+                "how can i donate blood?":"To donate blood, you must be in good health, weigh at least 50 kg, and be between 18-65 years old. Some medical conditions or medications may affect your eligibility.",
+                "What are the eligibility criteria for blood donation?": "To donate blood, you must be in good health, weigh at least 50 kg, and be between 18-65 years old. Some medical conditions or medications may affect your eligibility.",
+                "What are the benefits of donating blood?": "Donating blood helps save lives, reduces your risk of certain cancers, and can improve your cardiovascular health.",
+                "What is the process for blood donation?": "The process includes registration, a quick medical check, the donation itself, and post-donation refreshments.",
+                "How frequently can I donate blood?": "You can donate whole blood every 56 days, platelets every 7 days (up to 24 times a year), and plasma every 28 days.",
+                "What should I eat before donating blood?": "Before donating, it's best to have a healthy meal and drink plenty of fluids. Avoid fatty foods as they can affect the blood tests.",
+                "How long does the blood donation process take?": "The entire donation process usually takes about an hour, with the actual blood donation lasting around 10-15 minutes.",
+                "What are the different types of blood donations?": "There are several types: whole blood, platelets, plasma, and double red cell donations.",
+                "What should I do after donating blood?": "After donating, rest for a few minutes, enjoy a snack and drink, and avoid heavy lifting for the rest of the day.",
+                "What are the main blood types?": "The main blood types are A, B, AB, and O. Each type can be Rh-positive or Rh-negative, making a total of 8 blood types.",
+                "How do I match blood donors with recipients?": "Blood types must be compatible for a transfusion. For example, O-negative is a universal donor type, while AB-positive is a universal recipient type.",
+                "What are the requirements for blood donation?": "You need to be in good health, meet the age and weight criteria, and not have any disqualifying conditions or medications. Always check with the blood bank for specific requirements.",
+                "Can I donate blood if I have a chronic illness?": "It depends on the illness and how well it is managed. Consult with your healthcare provider or the blood bank for specific guidance.",
+                "Can I donate blood if I am pregnant?": "No, pregnant women are generally not eligible to donate blood. You can donate once you are no longer pregnant and have received medical clearance.",
+                "How is my blood tested before donation?": "Your blood is tested for infectious diseases and blood type to ensure safety for both you and the recipient.",
+                "What happens to my blood after donation?": "After donation, your blood is tested, processed, and separated into components like red cells, plasma, and platelets. These are then used for patients in need.",
+                "Can I donate blood if I have recently had a tattoo?": "Yes, but you should wait for at least 6 months after getting a tattoo to minimize the risk of infection.",
+                "Where can I donate blood?": "You can donate blood at local blood banks, hospitals, or during organized blood donation drives or camps. Check with local organizations for the nearest location.",
+                "How do I prepare for a blood donation camp?": "Ensure you are well-hydrated, have eaten a light meal, and bring identification. Wear comfortable clothing with sleeves that can be rolled up easily.",
+                "What is the difference between whole blood and platelet donation?": "Whole blood donation collects all components of your blood, while platelet donation focuses specifically on collecting platelets, which can take longer.",
+                "How is my privacy protected during blood donation?": "Your personal and medical information is kept confidential and is used solely to ensure your health and safety during the donation process.",
+                "Can I donate blood while on medication?": "It depends on the type of medication and your health condition. Consult with the blood bank or your healthcare provider to determine if you are eligible to donate.",
+                "What is the minimum age for blood donation?": "Typically, you must be at least 18 years old to donate blood. Some locations allow 16 or 17-year-olds with parental consent.",
+                "Which blood types are most needed?": "The demand for blood types can vary, but O-negative is often in high demand due to its universal compatibility. Check with local blood banks for specific needs.",
+                "How can I become a regular blood donor?": "You can sign up at your local blood bank or participate in regular blood donation drives. They will provide reminders and updates about upcoming donation opportunities."
+            };
+
+            const lowerInput = userInput.toLowerCase();
+            let foundResponse = false;
+            
+            for (const [question, answer] of Object.entries(responses)) {
+                if (lowerInput.includes(question.toLowerCase())) {
+                    botMessage.textContent = answer;
+                    foundResponse = true;
+                    break;
+                }
+            }
+
+            if (!foundResponse) {
+                botMessage.textContent = "I'm here to help! Please ask anything about blood donation.";
+            }
+
+            document.getElementById('messages').appendChild(botMessage);
+        }, 1000);
+    }
+});
+
+    </script>
+</body>
+</html>
